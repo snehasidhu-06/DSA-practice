@@ -1,0 +1,33 @@
+public class NumberPattern {
+    public static void main(String[] args) {
+        int n = 5; 
+
+        for (int i = 1; i <= n; i++) {
+             1. Print ascending numbers from 1 up to i
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+
+            // 2. Print spaces
+            // The number of spaces decreases as the row number increases
+            // Formula: 2 * (total rows - current row)
+            for (int j = 1; j <= 2 * (n - i); j++) {
+                System.out.print(" ");
+            }
+
+            // 3. Print descending numbers from i down to 1
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j);
+            }
+
+            // Move to the next line
+            System.out.println();
+        }
+    }
+}
+
+// o/p : 1        1
+12      21
+123    321
+1234  4321
+1234554321
